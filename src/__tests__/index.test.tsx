@@ -1,14 +1,11 @@
-import { render, screen } from '@testing-library/react'
-import Home from '@/pages/index'
+import '@testing-library/jest-dom';
+import { convertNumberIntoRomanNumber } from '../utility';
 
-describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />)
-
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
-    })
-
-    expect(heading).toBeInTheDocument()
-  })
-})
+describe('convertNumberIntoRomanNumber function', () => {
+  it('Converts max value (1000) correctly to a Roman numbers string (M)', () => {
+    expect(convertNumberIntoRomanNumber('1000')).toMatch('M');
+  });
+  it('Converts max value (1000) correctly to a Roman number (M)', () => {
+    expect(convertNumberIntoRomanNumber(1000)).toMatch('M');
+  });
+});
