@@ -1,0 +1,67 @@
+.grid {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+  grid-template-rows: 60px 1fr 1fr;
+}
+
+.input {
+  width: 521px;
+  color: rgba(255, 255, 255, 0.8);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  position: relative;
+  appearance: none;
+  transition-property: all;
+  transition-duration: 200ms;
+  font-size: 0.875rem;
+  padding: 0 0.75rem;
+  height: 2.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: #2a2a2a;
+}
+
+.input:focus {
+  z-index: 1;
+  border-color: #5a4a2d;
+  box-shadow: 0 0 0 1px #5a4a2d;
+}
+
+.error {
+  color: #d32929;
+  font-family: 'Roboto';
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.error:empty {
+  opacity: 0;
+  transform: translate3d(0, -20%, 0);
+}
+
+.result {
+  color: #fff5e6;
+  font-size: 40px;
+  letter-spacing: 40px;
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.result:empty {
+  opacity: 0;
+  transform: translate3d(0, -20%, 0);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,69 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      30deg,
+      rgb(0, 0, 0) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgb(0, 0, 0) 87.5%,
+      rgb(0, 0, 0)
+    ),
+    linear-gradient(
+      150deg,
+      rgb(0, 0, 0) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgb(0, 0, 0) 87.5%,
+      rgb(0, 0, 0)
+    ),
+    linear-gradient(
+      30deg,
+      rgb(0, 0, 0) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgb(0, 0, 0) 87.5%,
+      rgb(0, 0, 0)
+    ),
+    linear-gradient(
+      150deg,
+      rgb(0, 0, 0) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgb(0, 0, 0) 87.5%,
+      rgb(0, 0, 0)
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.467) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.467) 75%,
+      rgba(0, 0, 0, 0.467)
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.467) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.467) 75%,
+      rgba(0, 0, 0, 0.467)
+    );
+  background-size: 8px 14px;
+  background-position: 0px 0px, 0px 0px, 4px 7px, 4px 7px, 0px 0px, 4px 7px;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 21px;
+  font-size: 4rem;
+  text-align: center;
+  background-image: linear-gradient(155deg, #ecd29b, #5a4a2d);
+  color: transparent;
+  -webkit-background-clip: text;
+}

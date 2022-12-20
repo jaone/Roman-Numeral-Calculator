@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import styles from './io.module.css';
 import {
   convertNumberIntoRomanNumber,
   validationRules,
@@ -40,16 +41,16 @@ const IO: React.FC = () => {
       }
     });
   };
-
   return (
-    <div>
-      <div className="result">{result}</div>
+    <div className={styles.grid}>
+      <div className={styles.result}>{result}</div>
       <input
+        className={styles.input}
         type="text"
         placeholder="Enter an integer"
         onChange={debouncedHandleCalc}
       />
-      <div className="error">{validationMessage}</div>
+      <div className={styles.error}>{validationMessage}</div>
     </div>
   );
 };
