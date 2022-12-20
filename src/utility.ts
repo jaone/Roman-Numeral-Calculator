@@ -25,3 +25,11 @@ export const validationRules = [
     message: 'Parameter must be bigger than 0 and less or equal than 1000',
   },
 ];
+
+export const debounce = (fn: Function, ms = 300) => {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return function (this: any, ...args: any[]) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
