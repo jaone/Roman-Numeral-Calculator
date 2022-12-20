@@ -1,5 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { convertNumberIntoRomanNumber, validationRules } from '@/utility';
+import {
+  convertNumberIntoRomanNumber,
+  validationRules,
+  debounce,
+} from '@/utility';
 
 const IO: React.FC = () => {
   const [result, setResult] = useState<string | null>(null);
@@ -24,6 +28,8 @@ const IO: React.FC = () => {
     [result]
   );
 
+  const debouncedHandleCalc = debounce(handleCalc);
+
   const handleValidation = (value: string) => {
     if (!value) return false;
     const numberedVal = Number(value);
@@ -38,7 +44,11 @@ const IO: React.FC = () => {
   return (
     <div>
       <div className="result">{result}</div>
-      <input type="text" placeholder="Enter an integer" onChange={handleCalc} />
+      <input
+        type="text"
+        placeholder="Enter an integer"
+        onChange={debouncedHandleCalc}
+      />
       <div className="error">{validationMessage}</div>
     </div>
   );
