@@ -37,9 +37,9 @@ const IO: React.FC = () => {
 
   return (
     <div>
-      <div>{result}</div>
+      <div className="result">{result}</div>
       <input type="text" placeholder="Enter an integer" onChange={handleCalc} />
-      <div>{validationMessage}</div>
+      <div className="error">{validationMessage}</div>
     </div>
   );
 };
