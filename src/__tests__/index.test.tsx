@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 import IO from '@/components/io';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, act } from '@testing-library/react';
 import { convertNumberIntoRomanNumber } from '@/utility';
 
 describe('convertNumberIntoRomanNumber function', () => {
@@ -21,14 +22,20 @@ describe('UI Roman Numeral Input', () => {
     minmax: 'Parameter must be bigger than 0 and less or equal than 1000',
   };
   beforeEach(() => {
+    jest.useFakeTimers();
     const { container } = render(<IO />);
     resultEl = container.querySelector('.result');
     errorEl = container.querySelector('.error');
     let inputNode: HTMLInputElement | null = container.querySelector('input');
     setInputValue = (val: string = '-123') => {
       fireEvent.change(inputNode!, { target: { value: val } });
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
     };
+  });
+  afterEach(() => {
+    jest.useRealTimers();
   });
   // the following are success cases
   it('Romanian Numeric Input enters 123 and should not throw an error', () => {
