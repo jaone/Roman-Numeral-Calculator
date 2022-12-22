@@ -1,29 +1,45 @@
-# Next.js + Jest
+![](./src/public/ss.png)
 
-This example shows how to configure Jest to work with Next.js.
+## Roman Numeral Calculator
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+A basic integer to roman numeral converter with React, Typescript, CSS Modules and Jest
 
-## How to Use
+### 🔗 [Homepage](https://roman-numeral-calculator-phi.vercel.app/)
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
+### Install
 
 ```bash
-npx create-next-app --example with-jest with-jest-app
+yarn
 ```
+
+### Run
+
+#### Development
 
 ```bash
-yarn create next-app --example with-jest with-jest-app
+yarn dev
 ```
+
+#### Prod
 
 ```bash
-pnpm create next-app --example with-jest with-jest-app
+yarn build && yarn serve
 ```
 
-## Run Jest Tests
+#### Test
 
 ```bash
-npm test
+yarn test
 ```
+
+#### Test Coverage
+
+```bash
+yarn test:coverage
+```
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)

@@ -1,6 +1,10 @@
 {
   "name": "roman-numeral-calculator",
   "private": true,
+  "homepage": "https://github.com/jaone/Roman-Numeral-Calculator#readme",
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
