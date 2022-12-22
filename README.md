@@ -1,4 +1,4 @@
-![](/ss.png)
+![](./src/public/ss.png)
 
 ## Roman Numeral Calculator
 
